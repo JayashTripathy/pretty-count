@@ -1,6 +1,6 @@
 import { ScaleType, ScaleValue } from "./types";
 
-const scales: Omit<Record<ScaleType, ScaleValue[]>, "custom"> = {
+export const scales: Record<ScaleType, ScaleValue[]> = {
   short: [
     { value: 1e24, symbol: "Y" },
     { value: 1e21, symbol: "Z" },
@@ -21,13 +21,13 @@ const scales: Omit<Record<ScaleType, ScaleValue[]>, "custom"> = {
     { value: 1e3, symbol: "Thousand" },
   ],
   indian: [
-    { value: 1e24, symbol: "Shankh" },
-    { value: 1e21, symbol: "Padma" },
-    { value: 1e18, symbol: "Neel" },
-    { value: 1e15, symbol: "Kharab" },
-    { value: 1e12, symbol: "Arab" },
-    { value: 1e9, symbol: "Crore" },
-    { value: 1e6, symbol: "Lakh" },
+    { value: 1e17, symbol: "Shankh" },
+    { value: 1e15, symbol: "Padma" },
+    { value: 1e13, symbol: "Neel" },
+    { value: 1e11, symbol: "Kharab" },
+    { value: 1e9, symbol: "Arab" },
+    { value: 1e7, symbol: "Crore" },
+    { value: 1e5, symbol: "Lakh" },
     { value: 1e3, symbol: "Thousand" },
   ],
   eastAsian: [

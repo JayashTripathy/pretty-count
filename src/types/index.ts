@@ -1,16 +1,16 @@
 interface PrettyCountOptions {
-  digits: number;
-  scale: ScaleType;
+  digits?: number;
+  scale?: ScaleType;
   customScale?: ScaleValue[];
-  locale: string;
-  prefix: string;
-  suffix: string;
-  roundingMethod: "round" | "floor" | "ceil";
+  locale?: string;
+  prefix?: string;
+  suffix?: string;
+  roundingMethod?: "round" | "floor" | "ceil";
 }
 
-export interface PrettyCountArguments {
+export type PrettyCountArguments = {
   number: number;
-  options: PrettyCountOptions;
+  options?: PrettyCountOptions;
 }
 
 export type ScaleType =
@@ -19,9 +19,8 @@ export type ScaleType =
   | "indian"
   | "eastAsian"
   | "western"
-  | "custom";
 
-export interface ScaleValue {
+export type ScaleValue = {
   value: number;
   symbol: string;
 }

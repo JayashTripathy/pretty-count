@@ -6,7 +6,7 @@
     "module": "ESNext",
     "moduleResolution": "Node",
     "noImplicitReturns": true,
-    "noUnusedLocals": true,
+    "noUnusedLocals": false,
     "noUnusedParameters": true,
     "paths": {
       "~/*": ["./src/*"]
