@@ -1,16 +1,18 @@
-interface PrettyCountOptions {
+export interface PrettyCountOption {
   digits?: number;
   scale?: ScaleType;
   customScale?: ScaleValue[];
   locale?: string;
   prefix?: string;
+  seperator?: string;
   suffix?: string;
   roundingMethod?: "round" | "floor" | "ceil";
+  showFullSymbol?: boolean;
 }
 
 export type PrettyCountArguments = {
   number: number;
-  options?: PrettyCountOptions;
+  options?: PrettyCountOption;
 }
 
 export type ScaleType =
@@ -22,6 +24,7 @@ export type ScaleType =
 
 export type ScaleValue = {
   value: number;
+  shortSymbol?: string;
   symbol: string;
 }
 
