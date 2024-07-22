@@ -7,6 +7,6 @@
       "@pc/ui/*": ["./src/*"]
     }
   },
-  "include": ["src"],
+  "include": ["src", "../../apps/web/components/animated", "../../apps/web/components/site-header.tsx"],
   "exclude": ["node_modules", "dist"]
 }

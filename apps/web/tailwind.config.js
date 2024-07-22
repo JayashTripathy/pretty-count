@@ -1,0 +1,1 @@
+export * from "@pc/ui/tailwind.config"
