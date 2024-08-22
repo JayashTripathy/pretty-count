@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
-import HeaderAnimation from "~/components/animated/animated-header";
+import HeaderAnimation from "@pc/ui/components/ui/animated/animated-header";
+
 
 
 type Props = {};

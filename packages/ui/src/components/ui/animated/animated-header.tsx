@@ -2,7 +2,7 @@
 import React from "react";
 import { delay, motion } from "framer-motion";
 import { cn } from "@pc/ui/lib/utils";
-import useScrollPosition from "~/hooks/use-scroll-postion";
+import useScrollPosition from "@pc/ui/hooks/use-scroll-postion";
 
 type Props = {};
 

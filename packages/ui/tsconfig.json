@@ -2,11 +2,18 @@
   "extends": "@repo/typescript-config/react-library.json",
   "compilerOptions": {
     "outDir": "dist",
-    "baseUrl": ".",
+    "rootDir": ".",
+    "target": "es5",
+    "module": "NodeNext",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": "./",
     "paths": {
       "@pc/ui/*": ["./src/*"]
     }
   },
-  "include": ["src", "../../apps/web/components/animated", "../../apps/web/components/site-header.tsx"],
+  "include": [".", "src/**/*"],
   "exclude": ["node_modules", "dist"]
 }

@@ -1,16 +1,19 @@
 import "@pc/ui/globals.css"
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Manrope} from "next/font/google";
+const manrope = Manrope({subsets: ['latin']});
+
+// const geistSans = localFont({
+//   src: "./fonts/GeistVF.woff",
+//   variable: "--font-geist-sans",
+// });
+// const geistMono = localFont({
+//   src: "./fonts/GeistMonoVF.woff",
+//   variable: "--font-geist-mono",
+// });
 
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} bg-background text-primary dark`}>
+      <body className={`${manrope.className} bg-background text-primary dark`}>
         {children}
       </body>
     </html>
