@@ -1,0 +1,9 @@
+html {
+    @apply bg-background text-foreground;
+}
+
+.custom-border-bg {
+    @apply border border-transparent;
+    background: padding-box linear-gradient(hsl(var(--muted)), hsl(var(--muted))),
+      border-box linear-gradient(rgb(255 255 255), rgb(255 255 255 / 0.1));
+  }

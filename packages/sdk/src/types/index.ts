@@ -13,7 +13,7 @@ export type PrettyCountArguments = {
   options?: PrettyCountOption;
 };
 
-export type ScaleType = "short" | "long" | "indian" | "eastAsian" | "western";
+export type ScaleType = "short" | "long" | "indian" | "eastAsian" 
 
 export type ScaleValue = {
   value: number;
