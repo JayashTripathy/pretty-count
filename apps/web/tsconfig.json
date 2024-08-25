@@ -18,7 +18,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "tailwind.config.js",
-    "../../packages/ui/src/components/ui/site-header.tsx"
+    "../../packages/ui/src/components/**/*"
   ],
   "exclude": ["node_modules"]
 }

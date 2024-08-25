@@ -3,6 +3,8 @@ import Image from "next/image";
 import Header from "../components/header";
 import { useMemo, useState } from "react";
 import formatNumber, { ScaleType } from "@pretty-count";
+import { Input } from "@pc/ui/components/input";
+import { Label } from "@pc/ui/components/label";
 
 type FormattedNumber = {
   type: ScaleType;
@@ -34,25 +36,35 @@ export default function Home() {
     ];
   }, [number]);
 
-  console.log(formattednumber, "djiasojo");
   return (
     <div className="">
       <Header />
 
-      <div className="p-10 flex  justify-center items-center gap-10 md:max-w-7xl mx-auto">
-        {formattednumber.map((n) => (
-          <div className="flex w-1/5 flex-col gap-6  justify-center items-center bg-muted  p-7 rounded-3xl custom-border-bg ">
-            <div className="flex">
-              <div className="text-5xl font-extrabold mr-2">
-                {n.value.split(" ")[0]}
-              </div>
-              <div className="text-5xl text-emerald-500 ">
-                {n.value.split(" ")[1]}
+      <div className="p-10 flex relative  justify-center items-center gap-10 md:max-w-7xl mx-auto custom-border-bg  rounded-3xl overflow-hidden  flex-col">
+        {/* <div className="absolute inset-0 pointer-events-none [mask-image:radial-gradient(ellipse_at_center,white,transparent)]">dasda</div> */}
+        <div className="flex w-full justify-evenly gap-5">
+          {formattednumber.map((n) => (
+            <div className="flex flex-1  flex-col gap-3  justify-center  bg-secondary/30  p-7 rounded-xl z-50 border-2 overflow-auto ">
+              <div className="text-amber-400">{n.label}</div>
+              <div className="flex z-50 ">
+                <div className="text-5xl font-extrabold ">
+                  {n.value.split(" ")[0]}
+                </div>
+                <div className="text-5xl ">{n.value.split(" ")[1]}</div>
               </div>
             </div>
-            <div className="text-2xl">{n.label}</div>
-          </div>
-        ))}
+          ))}
+        </div>
+        <div className="w-full flex flex-col gap-2 ">
+          <Label className="text-left ml-2">Enter Value</Label>
+          <Input
+            type="number"
+            className="bg-secondary rounded-2xl p-4"
+            placeholder="Type count here ..."
+            value={number}
+            onChange={(e) => setNumber(Number(e.target.value))}
+          />
+        </div>
       </div>
     </div>
   );
