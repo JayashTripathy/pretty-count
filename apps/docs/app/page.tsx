@@ -3,7 +3,8 @@ import Image from "next/image";
 import Header from "../components/header";
 import { useMemo, useState } from "react";
 import formatNumber, { ScaleType } from "@pretty-count";
-import { Input, Label } from "@pc/ui";
+import { Button, Input, Label } from "@pc/ui";
+
 
 type FormattedNumber = {
   type: ScaleType;
@@ -39,7 +40,7 @@ export default function Home() {
     <div className="">
       <Header />
 
-      <div className="p-10 flex relative  justify-center items-center gap-10 md:max-w-7xl mx-auto custom-border-bg  rounded-3xl overflow-hidden  flex-col">
+      <div className="p-10 flex relative justify-center items-center gap-10 md:max-w-7xl mx-auto custom-border-bg  rounded-3xl overflow-hidden  flex-col">
         {/* <div className="absolute inset-0 pointer-events-none [mask-image:radial-gradient(ellipse_at_center,white,transparent)]">dasda</div> */}
         <div className="flex w-full justify-evenly gap-5">
           {formattednumber.map((n) => (
@@ -64,6 +65,7 @@ export default function Home() {
             onChange={(e) => setNumber(Number(e.target.value))}
           />
         </div>
+        <Button>Go to Docs</Button>
       </div>
     </div>
   );

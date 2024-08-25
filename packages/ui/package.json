@@ -10,7 +10,7 @@
       "require": "./dist/index.js",
       "types": "./dist/index.d.ts"
     },
-    "./global.css": "./dist/global.css",
+    "./globals.css": "./dist/index.css",
     "./package.json": "./package.json"
   },
   "private": true,
