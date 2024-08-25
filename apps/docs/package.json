@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@pc/ui": "workspace:*",
+    "@pc/tailwind-config": "workspace:*",
     "@pretty-count": "workspace:*",
     "lucide-react": "^0.412.0",
     "next": "15.0.0-rc.0",

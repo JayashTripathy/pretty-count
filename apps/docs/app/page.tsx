@@ -3,8 +3,7 @@ import Image from "next/image";
 import Header from "../components/header";
 import { useMemo, useState } from "react";
 import formatNumber, { ScaleType } from "@pretty-count";
-import { Input } from "@pc/ui/components/input";
-import { Label } from "@pc/ui/components/label";
+import { Input, Label } from "@pc/ui";
 
 type FormattedNumber = {
   type: ScaleType;
