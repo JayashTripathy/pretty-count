@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -60,7 +59,6 @@
   }
 }
 
-
 @layer base {
   * {
     @apply border-border;
@@ -70,13 +68,32 @@
   }
 }
 
-
 html {
-    @apply bg-background text-foreground;
+  @apply bg-background text-foreground;
 }
 
 .custom-border-bg {
-    @apply border border-transparent;
-    background: padding-box linear-gradient(hsl(var(--background)), hsl(var(--background))),
-      border-box linear-gradient(hsl(var(--border)), hsl(var(--foreground)/10%));
-  }
+  @apply border border-transparent;
+  background:
+    padding-box linear-gradient(hsl(var(--background)), hsl(var(--background))),
+    border-box linear-gradient(hsl(var(--border)), hsl(var(--foreground) / 10%));
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #cbcbcb;
+  outline: 2px solid #fff;
+  outline-offset: -2px;
+  border: 0.1px solid #b7b7b7;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #909090;
+}
