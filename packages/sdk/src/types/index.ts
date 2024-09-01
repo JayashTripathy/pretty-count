@@ -4,8 +4,9 @@ export interface PrettyCountOption {
   prefix?: string;
   seperator?: string;
   suffix?: string;
-  roundingMethod?: "round" | "floor" | "ceil";
+  roundingMethod?: "round" | "floor" | "ceil" ;
   showFullSymbol?: boolean;
+  decimalPlaces?: number;
 }
 
 export type PrettyCountArguments = {
