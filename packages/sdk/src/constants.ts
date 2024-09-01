@@ -37,3 +37,6 @@ export const scales: Record<ScaleType, ScaleValue[]> = {
     { value: 1e4, symbol: "万" },
   ],
 };
+
+
+export const roundingMethods = ["round", "floor", "ceil"] as const;

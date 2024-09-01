@@ -1,13 +1,14 @@
 import { scales } from "./constants";
 import { PrettyCountArguments, ScaleValue } from "./types";
+function getSymbol(scale: ScaleValue, showFullSymbol: boolean): String {
+
+  if (showFullSymbol || !scale.shortSymbol) return scale.symbol;
+
+  return scale.shortSymbol;
+}
 
 export function PrettyCount() {
-  function getSymbol(scale: ScaleValue, showFullSymbol: boolean): String {
 
-    if (showFullSymbol || !scale.shortSymbol) return scale.symbol;
-
-    return scale.shortSymbol;
-  }
 
   function formatNumber(
     number: PrettyCountArguments["number"],
@@ -50,8 +51,9 @@ export function PrettyCount() {
 
     let decimaledNumber = parseFloat(Number(formattedNumber).toFixed(decimalPlaces))
 
-  
-    return `${prefix}${decimaledNumber}${seperator}${symbol || ""}${suffix}`;
+    const result=  `${prefix}${decimaledNumber}${seperator}${symbol || ""}${suffix}`;
+    
+    return result
   }
 
   return { formatNumber };

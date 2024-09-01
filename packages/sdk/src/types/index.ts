@@ -1,10 +1,11 @@
+import { roundingMethods } from "../constants";
 export interface PrettyCountOption {
   scale?: ScaleType;
   customScale?: ScaleValue[];
   prefix?: string;
   seperator?: string;
   suffix?: string;
-  roundingMethod?: "round" | "floor" | "ceil" ;
+  roundingMethod?: typeof roundingMethods[number];
   showFullSymbol?: boolean;
   decimalPlaces?: number;
 }

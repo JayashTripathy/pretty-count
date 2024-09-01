@@ -2,8 +2,22 @@
 import Image from "next/image";
 import Header from "../components/header";
 import { useMemo, useState } from "react";
-import formatNumber, { ScaleType, PrettyCountOption } from "@pretty-count";
-import { Button, cn, Input, Label } from "@pc/ui";
+import formatNumber, {
+  ScaleType,
+  PrettyCountOption,
+  roundingMethods,
+} from "@pretty-count";
+import {
+  Button,
+  cn,
+  Input,
+  Label,
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@pc/ui";
 
 type FormattedNumber = {
   type: ScaleType;
@@ -16,7 +30,7 @@ export default function Home() {
   const [options, setOptions] = useState<PrettyCountOption | null>(null);
   const [openOptions, setOpenOptions] = useState(false);
 
-  const defaultOptions = [
+  const formattingOptions = [
     {
       label: "Prefix",
       value: options?.prefix,
@@ -35,17 +49,6 @@ export default function Home() {
       onchange: (e: HTMLInputElement) =>
         setOptions({ ...options, seperator: e.value }),
     },
-    {
-      label: "Rounding Method",
-      value: options?.roundingMethod,
-      onchange: (e: HTMLInputElement) =>
-        setOptions({ ...options, roundingMethod: e.value as any }),
-    },
-    // {
-    //   label: "Show Full Symbol",
-    //   value: options?.showFullSymbol,
-    //   onchange: (e: HTMLInputElement) => setOptions({ ...options, showFullSymbol: e.checked }),
-    // },
   ];
 
   const formattednumber = useMemo<FormattedNumber[]>(() => {
@@ -85,7 +88,7 @@ export default function Home() {
     <div className="">
       <Header />
       <div className=" md:max-w-7xl mx-auto ">
-        <div className="my-8 flex flex-col gap-2 pt-10">
+        <div className="my-8 flex flex-col gap-2 pt-4">
           <div className="font-bold text-xl md:text-3xl ">
             Make your count <span className="text-yellow-400 ">Elegant</span>
           </div>
@@ -127,23 +130,41 @@ export default function Home() {
                 >
                   {!openOptions ? "more" : "hide"} options
                 </Button>
-                <div
-                  className={cn(
-                    " grid grid-cols-2 gap-4 transition-all duration-200 ease-in-out  ",
-                    openOptions ? "max-h-52" : "max-h-0 overflow-hidden"
-                  )}
-                >
-                  {defaultOptions.map((opt) => (
+                <div>
+                  <div
+                    className={cn(
+                      " grid grid-cols-3 gap-4 transition-all duration-200 ease-in-out  ",
+                      openOptions ? "max-h-52" : "max-h-0 overflow-hidden"
+                    )}
+                  >
+                    {formattingOptions.map((opt) => (
+                      <div className="flex flex-col gap-3">
+                        <Label>{opt.label}</Label>
+                        <Input
+                          className="bg-secondary rounded-2xl p-8"
+                          value={opt.value}
+                          placeholder="Type here ..."
+                          onChange={(e) => opt.onchange(e.target)}
+                        />
+                      </div>
+                    ))}
                     <div className="flex flex-col gap-3">
-                      <Label>{opt.label}</Label>
-                      <Input
-                        className="bg-secondary rounded-2xl p-8"
-                        value={opt.value}
-                        placeholder="Type here ..."
-                        onChange={(e) => opt.onchange(e.target)}
-                      />
+                      <Label>Rounding Method</Label>
+
+                      <Select onValueChange={(val: typeof roundingMethods[number]) => setOptions({...options,}) }>
+                        <SelectTrigger className="w-full rounded-xl bg-secondary p-4">
+                          <SelectValue placeholder="Select a rounding option" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          {roundingMethods.map((method) => (
+                            <SelectItem key={method} value={method}>
+                              {method}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
                     </div>
-                  ))}
+                  </div>
                 </div>
               </div>
             </div>
