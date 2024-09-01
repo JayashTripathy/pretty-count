@@ -12,6 +12,7 @@
   },
   "aliases": {
     "components": "@pc/ui/components",
+    "ui": "@pc/ui/components",
     "utils": "@pc/ui/lib/utils"
   }
 }
