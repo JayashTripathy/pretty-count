@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import Header from "../components/header";
+
 import { useMemo, useState } from "react";
 import formatNumber, {
   ScaleType,
@@ -25,7 +25,7 @@ type FormattedNumber = {
   label: string;
 };
 
-export default function Home() {
+export default function LandingSection() {
   const [number, setNumber] = useState(1000000);
   const [options, setOptions] = useState<PrettyCountOption | null>(null);
   const [openOptions, setOpenOptions] = useState(false);
@@ -85,8 +85,7 @@ export default function Home() {
   }, [number, options]);
 
   return (
-    <div className="">
-      <Header />
+ <>
       <div className=" md:max-w-7xl mx-auto ">
         <div className="my-8 flex flex-col gap-2 pt-4">
           <div className="font-bold text-xl md:text-3xl ">
@@ -151,7 +150,7 @@ export default function Home() {
                     <div className="flex flex-col gap-3">
                       <Label>Rounding Method</Label>
 
-                      <Select onValueChange={(val: typeof roundingMethods[number]) => setOptions({...options,}) }>
+                      <Select onValueChange={(val: typeof roundingMethods[number]) => setOptions({...options, roundingMethod: val}) }>
                         <SelectTrigger className="w-full rounded-xl bg-secondary p-4">
                           <SelectValue placeholder="Select a rounding option" />
                         </SelectTrigger>
@@ -171,6 +170,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </div>
+      </>
   );
 }

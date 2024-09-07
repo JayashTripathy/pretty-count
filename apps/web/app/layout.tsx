@@ -1,16 +1,9 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
-import { Manrope} from "next/font/google";
-const manrope = Manrope({subsets: ['latin']});
 
-// const geistSans = localFont({
-//   src: "./fonts/GeistVF.woff",
-//   variable: "--font-geist-sans",
-// });
-// const geistMono = localFont({
-//   src: "./fonts/GeistMonoVF.woff",
-//   variable: "--font-geist-mono",
-// });
+import "./globals.css"
+import "@pc/ui/globals.css"
+import Header from "./components/header";
+import LandingSection from "./components/landing-section";
 
 
 
@@ -25,8 +18,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${manrope.className} bg-background text-primary dark`}>
+    <html lang="en" className="dark">
+      <body className="">
+        <Header/>
+        <LandingSection/>
         {children}
       </body>
     </html>
