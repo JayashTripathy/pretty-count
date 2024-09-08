@@ -18,6 +18,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@pc/ui"
+import { PlusIcon } from "lucide-react"
 
 type FormattedNumber = {
   type: ScaleType
@@ -84,6 +85,8 @@ export default function LandingSection() {
     ]
   }, [number, options])
 
+  const quickAdd = [1000, 10000, 100000]
+
   return (
     <>
       <div className=" md:max-w-7xl mx-auto ">
@@ -112,15 +115,30 @@ export default function LandingSection() {
                 </div>
               ))}
             </div>
+
             <div className="w-full flex flex-col gap-2 ">
               <Label className="text-left ml-2 mb-2">Enter Value</Label>
-              <Input
-                type="number"
-                className="bg-secondary rounded-2xl p-8"
-                placeholder="Type count here ..."
-                value={number}
-                onChange={(e) => setNumber(Number(e.target.value))}
-              />
+              <div className="flex flex-col gap-2">
+                <Input
+                  type="number"
+                  className="bg-secondary rounded-2xl p-8"
+                  placeholder="Type count here ..."
+                  value={number}
+                  onChange={(e) => setNumber(Number(e.target.value))}
+                />
+                <div className=" flex gap-2 jus">
+                  {quickAdd.map((n) => (
+                    <Button
+                      variant={"outline"}
+                      className=" rounded-xl gap-3"
+                      onClick={() => setNumber((prev) => prev + n)}
+                    >
+                      <PlusIcon className="w-4 h-4" /> {n}
+                    </Button>
+                  ))}
+                </div>
+              </div>
+
               <div>
                 <Button
                   variant={"link"}
@@ -174,7 +192,6 @@ export default function LandingSection() {
           </div>
         </div>
       </div>
-     
     </>
   )
 }
