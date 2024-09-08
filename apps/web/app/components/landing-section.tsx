@@ -89,7 +89,7 @@ export default function LandingSection() {
 
   return (
     <>
-      <div className=" md:max-w-7xl mx-auto ">
+      <div className=" md:max-w-6xl mx-auto w-full ">
         <div className="my-8 flex flex-col gap-2 pt-4">
           <div className="font-bold text-xl md:text-3xl ">
             Make your count <span className="text-yellow-400 ">Elegant</span>
