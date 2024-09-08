@@ -35,17 +35,19 @@ export function PrettyCount() {
   
     if (targetScale) {
       const scaleValue = targetScale.value;
+      const scaledNumber = number / scaleValue
       switch (roundingMethod) {
         case "floor":
-          formattedNumber = Math.floor(number / scaleValue).toString();
+          formattedNumber = Math.floor(scaledNumber).toString();
           break;
         case "ceil":
-          formattedNumber = Math.ceil(number / scaleValue).toString();
+          formattedNumber = Math.ceil(scaledNumber).toString();
           break;
         case "round":
-          formattedNumber = Math.round(number / scaleValue).toString();
+          formattedNumber = Math.round(scaledNumber).toString();
+          break;
         default:
-          formattedNumber = (number / scaleValue).toString();  
+          formattedNumber = scaledNumber.toString();  
       }
     }
 

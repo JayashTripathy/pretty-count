@@ -1,8 +1,8 @@
 import { PrettyCount } from "./prettyCount";
-import {roundingMethods} from "./constants"
+import {roundingMethods, scales} from "./constants"
 const { formatNumber } = PrettyCount();
 
-export { formatNumber, roundingMethods };
+export { formatNumber, roundingMethods, scales };
 
 export default formatNumber;
 

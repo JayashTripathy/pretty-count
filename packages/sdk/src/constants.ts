@@ -39,4 +39,4 @@ export const scales: Record<ScaleType, ScaleValue[]> = {
 };
 
 
-export const roundingMethods = ["round", "floor", "ceil"] as const;
+export const roundingMethods = ["round", "floor", "ceil", null] as const;

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Header() {
     return (
-      <header className='  z-10  px-6 py-5 lg:z-10 lg:flex lg:h-16 lg:items-center lg:px-8 lg:py-0 sticky top-0 backdrop-blur-3xl'>
+      <header className='  z-10  px-6 py-5 lg:z-10 lg:flex lg:h-16 lg:items-center lg:px-8 lg:py-0 sticky top-0 backdrop-blur-3xl bg-zinc-900 border-b border-border/50'>
         <div className='mx-auto flex w-full items-center justify-between md:max-w-7xl'>
           <a href='/' className='relative flex items-center'>
             <div className=''>Pretty Count</div>

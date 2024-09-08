@@ -101,7 +101,7 @@ export default function LandingSection() {
             {/* <div className="absolute inset-0 pointer-events-none [mask-image:radial-gradient(ellipse_at_center,white,transparent)]">dasda</div > */}
             <div className="flex w-full justify-evenly gap-5">
               {formattednumber.map((n) => (
-                <div className="flex flex-1  flex-col gap-3  justify-center  bg-secondary/30  p-7  z-50 overflow-auto rounded-2xl">
+                <div className="flex flex-1  flex-col gap-3  justify-center  bg-secondary/30  p-7  z-[5] overflow-auto rounded-2xl">
                   <div className="text-amber-400">{n.label}</div>
                   <div className="flex z-50 ">
                     <div className="text-5xl font-extrabold ">
