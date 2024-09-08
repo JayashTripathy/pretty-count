@@ -2,8 +2,12 @@ import type { Metadata } from "next"
 
 import "./globals.css"
 import "@pc/ui/globals.css"
-import Header from "./components/header"
-import LandingSection from "./components/landing-section"
+import { Mukta } from "next/font/google"
+
+const mukta = Mukta({
+  subsets: ["latin"],
+  weight: ["200", "300", "400", "500", "600", "700", "800"],
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className="">{children}</body>
+      <body className={`${mukta.className} bg-background`}>{children}</body>
     </html>
   )
 }

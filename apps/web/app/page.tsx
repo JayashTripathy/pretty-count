@@ -6,6 +6,7 @@ import { Code } from "./components/code/index"
 import LandingSection from "./components/landing-section"
 import Header from "./components/header"
 import SectionTitle from "./components/ui/section-title"
+import Footer from "./components/footer"
 
 type Props = {}
 
@@ -45,6 +46,7 @@ function Page({}: Props) {
           ))}
         </div>
       </div>
+      <Footer/>
     </div>
   )
 }

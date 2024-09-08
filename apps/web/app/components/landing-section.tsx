@@ -1,12 +1,12 @@
-"use client";
-import Image from "next/image";
+"use client"
+import Image from "next/image"
 
-import { useMemo, useState } from "react";
+import { useMemo, useState } from "react"
 import formatNumber, {
   ScaleType,
   PrettyCountOption,
   roundingMethods,
-} from "@pretty-count";
+} from "@pretty-count"
 import {
   Button,
   cn,
@@ -17,18 +17,18 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@pc/ui";
+} from "@pc/ui"
 
 type FormattedNumber = {
-  type: ScaleType;
-  value: string;
-  label: string;
-};
+  type: ScaleType
+  value: string
+  label: string
+}
 
 export default function LandingSection() {
-  const [number, setNumber] = useState(1000000);
-  const [options, setOptions] = useState<PrettyCountOption | null>(null);
-  const [openOptions, setOpenOptions] = useState(false);
+  const [number, setNumber] = useState(1000000)
+  const [options, setOptions] = useState<PrettyCountOption | null>(null)
+  const [openOptions, setOpenOptions] = useState(false)
 
   const formattingOptions = [
     {
@@ -49,7 +49,7 @@ export default function LandingSection() {
       onchange: (e: HTMLInputElement) =>
         setOptions({ ...options, seperator: e.value }),
     },
-  ];
+  ]
 
   const formattednumber = useMemo<FormattedNumber[]>(() => {
     return [
@@ -81,11 +81,11 @@ export default function LandingSection() {
         }),
         label: "East Asian",
       },
-    ];
-  }, [number, options]);
+    ]
+  }, [number, options])
 
   return (
- <>
+    <>
       <div className=" md:max-w-7xl mx-auto ">
         <div className="my-8 flex flex-col gap-2 pt-4">
           <div className="font-bold text-xl md:text-3xl ">
@@ -133,7 +133,7 @@ export default function LandingSection() {
                   <div
                     className={cn(
                       " grid grid-cols-3 gap-4 transition-all duration-200 ease-in-out  ",
-                      openOptions ? "max-h-52" : "max-h-0 overflow-hidden"
+                      openOptions ? "max-h-52" : "max-h-0 overflow-hidden",
                     )}
                   >
                     {formattingOptions.map((opt) => (
@@ -150,7 +150,11 @@ export default function LandingSection() {
                     <div className="flex flex-col gap-3">
                       <Label>Rounding Method</Label>
 
-                      <Select onValueChange={(val: typeof roundingMethods[number]) => setOptions({...options, roundingMethod: val}) }>
+                      <Select
+                        onValueChange={(
+                          val: (typeof roundingMethods)[number],
+                        ) => setOptions({ ...options, roundingMethod: val })}
+                      >
                         <SelectTrigger className="w-full rounded-xl bg-secondary p-4">
                           <SelectValue placeholder="Select a rounding option" />
                         </SelectTrigger>
@@ -170,6 +174,7 @@ export default function LandingSection() {
           </div>
         </div>
       </div>
-      </>
-  );
+     
+    </>
+  )
 }
