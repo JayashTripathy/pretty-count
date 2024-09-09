@@ -15,7 +15,7 @@ export type PrettyCountArguments = {
   options?: PrettyCountOption;
 };
 
-export type ScaleType = "short" | "long" | "indian" | "eastAsian" 
+export type ScaleType = "standard" | "indian" | "eastAsian" 
 
 export type ScaleValue = {
   value: number;
@@ -23,18 +23,3 @@ export type ScaleValue = {
   symbol: string;
 };
 
-// scale: ScaleType;
-// precision: number;
-// shortScale: ScaleValue[];
-// longScale: ScaleValue[];
-// indianScale: ScaleValue[];
-// eastAsianScale: ScaleValue[];
-// westernScale: ScaleValue[];
-// shortScalePrecision: number;
-// longScalePrecision: number;
-// indianScalePrecision: number;
-// eastAsianScalePrecision: number;
-// westernScalePrecision: number;
-// fallbackScale: ScaleValue[];
-// fallbackScalePrecision: number;
-// fallbackScaleType: ScaleType

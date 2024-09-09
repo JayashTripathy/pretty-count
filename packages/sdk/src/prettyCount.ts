@@ -20,8 +20,8 @@ export function PrettyCount() {
       prefix = "",
       suffix = "",
       roundingMethod = null,
-      seperator = "",
-      showFullSymbol = false,
+      seperator = " ",
+      showFullSymbol = true,
       decimalPlaces = 2,
     } = options;
   

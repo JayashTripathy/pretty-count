@@ -65,9 +65,9 @@ export default function LandingSection() {
       },
 
       {
-        type: "short",
+        type: "standard",
         value: formatNumber(number, {
-          scale: "short",
+          scale: "standard",
           seperator: " ",
           ...options,
         }),
