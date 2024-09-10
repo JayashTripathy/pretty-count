@@ -39,7 +39,7 @@ function Page({}: Props) {
         <LandingSection />
         <br />
         <div className="md:max-w-6xl mx-auto  py-4 flex flex-col gap-6 w-full">
-          <SectionTitle title="Usage" />
+          <SectionTitle title="Usage" id="usage" />
           <div className="flex flex-col gap-4">
             {usageSteps.map((step) => (
               <div className="bg-card flex flex-col gap-2 ">
