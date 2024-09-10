@@ -32,8 +32,7 @@ function Page({}: Props) {
   return (
     <>
       <div className="antialiased relative flex flex-col">
-
-      <Header />
+        <Header />
         <LandingSection />
         <br />
         <div className="md:max-w-6xl mx-auto  py-4 flex flex-col gap-6 w-full">

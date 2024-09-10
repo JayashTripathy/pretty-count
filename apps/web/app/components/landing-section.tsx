@@ -88,8 +88,11 @@ export default function LandingSection() {
   const quickAdd = [1000, 10000, 100000]
 
   return (
-    <>
-      <div className=" md:max-w-6xl mx-auto w-full ">
+    <div className="relative">
+      <div className="absolute top-0 left-0 w-full h-56 bg-gradient-to-tr from-yellow-300/80 via-yellow-400/10 to-orange-500/5 blur-[118px]    z-2">
+        {" "}
+      </div>
+      <div className=" md:max-w-6xl mx-auto w-full relative z-10 ">
         <div className="my-8 flex flex-col gap-2 pt-4">
           <div className="font-bold text-xl md:text-3xl ">
             Make your count <span className="text-yellow-400 ">Elegant</span>
@@ -192,6 +195,6 @@ export default function LandingSection() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
