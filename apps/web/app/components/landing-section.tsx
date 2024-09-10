@@ -19,6 +19,7 @@ import {
   SelectValue,
 } from "@pc/ui"
 import { PlusIcon } from "lucide-react"
+import PrettyCountOptionTable from "./optionsTable"
 
 type FormattedNumber = {
   type: ScaleType
@@ -195,6 +196,7 @@ export default function LandingSection() {
           </div>
         </div>
       </div>
+   
     </div>
   )
 }

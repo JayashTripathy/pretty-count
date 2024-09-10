@@ -7,6 +7,7 @@ import LandingSection from "./components/landing-section"
 import Header from "./components/header"
 import SectionTitle from "./components/ui/section-title"
 import Footer from "./components/footer"
+import PrettyCountOptionTable from "./components/optionsTable"
 
 type Props = {}
 
@@ -33,6 +34,8 @@ function Page({}: Props) {
     <>
       <div className="antialiased relative flex flex-col">
         <Header />
+        <div className="mx-6">
+
         <LandingSection />
         <br />
         <div className="md:max-w-6xl mx-auto  py-4 flex flex-col gap-6 w-full">
@@ -49,6 +52,9 @@ function Page({}: Props) {
             ))}
           </div>
         </div>
+        <PrettyCountOptionTable/>
+        </div>
+
         <Footer />
       </div>
     </>
