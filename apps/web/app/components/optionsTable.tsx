@@ -1,14 +1,19 @@
 import SectionTitle from "./ui/section-title"
+import ScaleValue from "../../content/types/scaleValue.mdx"
+import ScaleType from "../../content/types/scaleType.mdx"
+
+import { Code } from "./code"
+import Link from "next/link"
 const prettyCountOptions = [
   {
     property: "scale",
-    type: "ScaleType",
+    type: <Link href={"#ScaleType"} className="text-blue-300">ScaleType</Link>,
     description: "Specifies the scale type to use.",
     default: '"indian"',
   },
   {
     property: "customScale",
-    type: "ScaleValue[]",
+    type: <Link href={"#ScaleValue"} className="text-blue-300">ScaleValue[]</Link>,
     description:
       "An array of custom scale values to use instead of the predefined scales.",
     default: "null",
@@ -27,7 +32,7 @@ const prettyCountOptions = [
   },
   {
     property: "roundingMethod",
-    type: "typeof roundingMethods[number]",
+    type: `"round" | "floor" | "ceil"` ,
     description: "The method to use for rounding the number.",
     default: "null",
   },
@@ -96,6 +101,17 @@ export default function PrettyCountOptionTable() {
           </tbody>
         </table>
       </div>
+
+      <SectionTitle title="Types"   />
+      <div className="flex flex-col gap-2">
+      <SectionTitle title="Scale Value" id="ScaleValue"  className="text-md font-thin" />
+      <ScaleValue components={{Code}} />
+      <SectionTitle title="Scale Type" id="ScaleType"   className="text-md font-thin" />
+      <ScaleType components={{Code}} />
+
+      </div>
+
     </div>
   )
 }
+ 

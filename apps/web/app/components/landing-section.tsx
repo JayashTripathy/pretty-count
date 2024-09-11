@@ -90,7 +90,7 @@ export default function LandingSection() {
 
   return (
     <div className="relative">
-      <div className="absolute top-0 left-0 w-full h-56 bg-gradient-to-tr from-yellow-300/80 via-yellow-400/10 to-orange-500/5 blur-[118px]    z-2">
+      <div className="absolute top-0 left-0 w-full h-56 bg-gradient-to-tr via-yellow-300/10 from-yellow-400/10 to-orange-500/5 blur-[118px]    z-2">
         {" "}
       </div>
       <div className=" md:max-w-6xl mx-auto w-full relative z-10 ">
