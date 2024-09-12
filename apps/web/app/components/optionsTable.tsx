@@ -7,13 +7,13 @@ import Link from "next/link"
 const prettyCountOptions = [
   {
     property: "scale",
-    type: <Link href={"#ScaleType"} className="text-blue-300">ScaleType</Link>,
+    type: <Link href={"#ScaleType"} className="text-yellow-300">ScaleType</Link>,
     description: "Specifies the scale type to use.",
     default: '"indian"',
   },
   {
     property: "customScale",
-    type: <Link href={"#ScaleValue"} className="text-blue-300">ScaleValue[]</Link>,
+    type: <Link href={"#ScaleValue"} className="text-yellow-300">ScaleValue[]</Link>,
     description:
       "An array of custom scale values to use instead of the predefined scales.",
     default: "null",
