@@ -1,5 +1,5 @@
 {
-  "name": "@pretty-count",
+  "name": "pretty-count",
   "version": "0.1.1",
   "description": "Javascript library to format numbers in a pretty human readable format",
   "repository": {
