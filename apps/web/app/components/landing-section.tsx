@@ -6,7 +6,7 @@ import formatNumber, {
   ScaleType,
   PrettyCountOption,
   roundingMethods,
-} from "@pretty-count"
+} from "pretty-count"
 import {
   Button,
   cn,
