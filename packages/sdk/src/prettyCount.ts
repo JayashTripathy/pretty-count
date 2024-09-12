@@ -52,8 +52,8 @@ export function PrettyCount() {
     }
 
     let decimaledNumber = parseFloat(Number(formattedNumber).toFixed(decimalPlaces))
-
-    const result=  `${prefix}${decimaledNumber}${seperator}${symbol || ""}${suffix}`;
+    const visibleSeperator = seperator.replace(/ /g, '\u00A0');  // Unicode non-breaking space
+    const result=  `${prefix}${decimaledNumber}${visibleSeperator}${symbol || ""}${suffix}`;
     
     return result
   }
