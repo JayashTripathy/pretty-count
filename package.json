@@ -1,5 +1,5 @@
 {
-  "name": "pretty-count",
+  "name": "pretty-count-monorepo",
   "private": true,
   "scripts": {
     "build": "turbo build",
