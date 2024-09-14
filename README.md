@@ -42,5 +42,28 @@ pc(1000000000, {
 | [`showFullSymbol`](command:_github.copilot.openSymbolFromReferences?%5B%22showFullSymbol%22%2C%5B%7B%22uri%22%3A%7B%22%24mid%22%3A1%2C%22fsPath%22%3A%22c%3A%5C%5CUsers%5C%5CAdmin%5C%5Cdev-space%5C%5Cpretty-count%5C%5Capps%5C%5Cweb%5C%5Capp%5C%5Ccomponents%5C%5CoptionsTable.tsx%22%2C%22_sep%22%3A1%2C%22external%22%3A%22file%3A%2F%2F%2Fc%253A%2FUsers%2FAdmin%2Fdev-space%2Fpretty-count%2Fapps%2Fweb%2Fapp%2Fcomponents%2FoptionsTable.tsx%22%2C%22path%22%3A%22%2Fc%3A%2FUsers%2FAdmin%2Fdev-space%2Fpretty-count%2Fapps%2Fweb%2Fapp%2Fcomponents%2FoptionsTable.tsx%22%2C%22scheme%22%3A%22file%22%7D%2C%22pos%22%3A%7B%22line%22%3A46%2C%22character%22%3A15%7D%7D%5D%5D "Go to definition") | [`boolean`](command:_github.copilot.openSymbolFromReferences?%5B%22boolean%22%2C%5B%7B%22uri%22%3A%7B%22%24mid%22%3A1%2C%22fsPath%22%3A%22c%3A%5C%5CUsers%5C%5CAdmin%5C%5Cdev-space%5C%5Cpretty-count%5C%5Capps%5C%5Cweb%5C%5Capp%5C%5Ccomponents%5C%5CoptionsTable.tsx%22%2C%22_sep%22%3A1%2C%22external%22%3A%22file%3A%2F%2F%2Fc%253A%2FUsers%2FAdmin%2Fdev-space%2Fpretty-count%2Fapps%2Fweb%2Fapp%2Fcomponents%2FoptionsTable.tsx%22%2C%22path%22%3A%22%2Fc%3A%2FUsers%2FAdmin%2Fdev-space%2Fpretty-count%2Fapps%2Fweb%2Fapp%2Fcomponents%2FoptionsTable.tsx%22%2C%22scheme%22%3A%22file%22%7D%2C%22pos%22%3A%7B%22line%22%3A47%2C%22character%22%3A11%7D%7D%5D%5D "Go to definition")                                                          | Whether to show the full symbol or use the short version.                                     | [`true`](command:_github.copilot.openSymbolFromReferences?%5B%22true%22%2C%5B%7B%22uri%22%3A%7B%22%24mid%22%3A1%2C%22fsPath%22%3A%22c%3A%5C%5CUsers%5C%5CAdmin%5C%5Cdev-space%5C%5Cpretty-count%5C%5Capps%5C%5Cweb%5C%5Capp%5C%5Ccomponents%5C%5CoptionsTable.tsx%22%2C%22_sep%22%3A1%2C%22external%22%3A%22file%3A%2F%2F%2Fc%253A%2FUsers%2FAdmin%2Fdev-space%2Fpretty-count%2Fapps%2Fweb%2Fapp%2Fcomponents%2FoptionsTable.tsx%22%2C%22path%22%3A%22%2Fc%3A%2FUsers%2FAdmin%2Fdev-space%2Fpretty-count%2Fapps%2Fweb%2Fapp%2Fcomponents%2FoptionsTable.tsx%22%2C%22scheme%22%3A%22file%22%7D%2C%22pos%22%3A%7B%22line%22%3A49%2C%22character%22%3A14%7D%7D%5D%5D "Go to definition")  |
 | [`decimalPlaces`](command:_github.copilot.openSymbolFromReferences?%5B%22decimalPlaces%22%2C%5B%7B%22uri%22%3A%7B%22%24mid%22%3A1%2C%22fsPath%22%3A%22c%3A%5C%5CUsers%5C%5CAdmin%5C%5Cdev-space%5C%5Cpretty-count%5C%5Capps%5C%5Cweb%5C%5Capp%5C%5Ccomponents%5C%5CoptionsTable.tsx%22%2C%22_sep%22%3A1%2C%22external%22%3A%22file%3A%2F%2F%2Fc%253A%2FUsers%2FAdmin%2Fdev-space%2Fpretty-count%2Fapps%2Fweb%2Fapp%2Fcomponents%2FoptionsTable.tsx%22%2C%22path%22%3A%22%2Fc%3A%2FUsers%2FAdmin%2Fdev-space%2Fpretty-count%2Fapps%2Fweb%2Fapp%2Fcomponents%2FoptionsTable.tsx%22%2C%22scheme%22%3A%22file%22%7D%2C%22pos%22%3A%7B%22line%22%3A52%2C%22character%22%3A15%7D%7D%5D%5D "Go to definition") | [`number`](command:_github.copilot.openSymbolFromReferences?%5B%22number%22%2C%5B%7B%22uri%22%3A%7B%22%24mid%22%3A1%2C%22fsPath%22%3A%22c%3A%5C%5CUsers%5C%5CAdmin%5C%5Cdev-space%5C%5Cpretty-count%5C%5Capps%5C%5Cweb%5C%5Capp%5C%5Ccomponents%5C%5CoptionsTable.tsx%22%2C%22_sep%22%3A1%2C%22external%22%3A%22file%3A%2F%2F%2Fc%253A%2FUsers%2FAdmin%2Fdev-space%2Fpretty-count%2Fapps%2Fweb%2Fapp%2Fcomponents%2FoptionsTable.tsx%22%2C%22path%22%3A%22%2Fc%3A%2FUsers%2FAdmin%2Fdev-space%2Fpretty-count%2Fapps%2Fweb%2Fapp%2Fcomponents%2FoptionsTable.tsx%22%2C%22scheme%22%3A%22file%22%7D%2C%22pos%22%3A%7B%22line%22%3A23%2C%22character%22%3A55%7D%7D%5D%5D "Go to definition")                                                            | The number of decimal places to display in the formatted number.                              | [`2`](command:_github.copilot.openSymbolFromReferences?%5B%222%22%2C%5B%7B%22uri%22%3A%7B%22%24mid%22%3A1%2C%22fsPath%22%3A%22c%3A%5C%5CUsers%5C%5CAdmin%5C%5Cdev-space%5C%5Cpretty-count%5C%5Capps%5C%5Cweb%5C%5Capp%5C%5Ccomponents%5C%5CoptionsTable.tsx%22%2C%22_sep%22%3A1%2C%22external%22%3A%22file%3A%2F%2F%2Fc%253A%2FUsers%2FAdmin%2Fdev-space%2Fpretty-count%2Fapps%2Fweb%2Fapp%2Fcomponents%2FoptionsTable.tsx%22%2C%22path%22%3A%22%2Fc%3A%2FUsers%2FAdmin%2Fdev-space%2Fpretty-count%2Fapps%2Fweb%2Fapp%2Fcomponents%2FoptionsTable.tsx%22%2C%22scheme%22%3A%22file%22%7D%2C%22pos%22%3A%7B%22line%22%3A56%2C%22character%22%3A14%7D%7D%5D%5D "Go to definition")     |
 
+## Types
 
+### ScaleValue
+```jsx
+export type ScaleValue = {
+  value: number;
+  shortSymbol?: string;
+  symbol: string;
+};
+```
+
+### ScaleValue
+```jsx
+export type ScaleValue = {
+  value: number;
+  shortSymbol?: string;
+  symbol: string;
+};
+```
+
+### ScaleType
+```jsx
+export type ScaleType = "standard" | "indian" | "eastAsian" 
+``` 
 
