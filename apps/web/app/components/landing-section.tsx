@@ -190,8 +190,32 @@ export default function LandingSection() {
                       </Select>
                     </div>
                     <div className="flex flex-col gap-3">
+                      <Label>Decimal Places</Label>
+                      <Select
+                        onValueChange={(val) =>
+                          setOptions({ ...options, decimalPlaces: Number(val) })
+                        }
+                      >
+                        <SelectTrigger className="w-full rounded-xl bg-secondary p-4">
+                          <SelectValue placeholder="Select a rounding option" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          {[1, 2, 3, 4, 5].map((method) => (
+                            <SelectItem key={method} value={method.toString()}>
+                              {method}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                    </div>
+                    <div className="flex flex-col gap-3">
                       <Label htmlFor="short-symbol">Short Symbol</Label>
-                      <Switch id="short-symbol" onCheckedChange={(checked) => setOptions({...options, showFullSymbol: !checked})} />
+                      <Switch
+                        id="short-symbol"
+                        onCheckedChange={(checked) =>
+                          setOptions({ ...options, showFullSymbol: !checked })
+                        }
+                      />
                     </div>
                   </div>
                 </div>
