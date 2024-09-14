@@ -58,8 +58,3 @@ export type ScaleValue = {
 export type ScaleType = "standard" | "indian" | "eastAsian" 
 ```
 
-### Rounding Method
-```jsx
-export type ScaleType = "standard" | "indian" | "eastAsian" 
-``` 
-
