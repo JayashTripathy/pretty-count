@@ -8,7 +8,7 @@ import Header from "./components/header"
 import SectionTitle from "./components/ui/section-title"
 import Footer from "./components/footer"
 import PrettyCountOptionTable from "./components/optionsTable"
-
+import { Analytics } from "@vercel/analytics/react"
 type Props = {}
 
 const usageSteps = [
@@ -32,27 +32,27 @@ const usageSteps = [
 function Page({}: Props) {
   return (
     <>
+      <Analytics />
       <div className="antialiased relative flex flex-col">
         <Header />
         <div className="mx-6">
-
-        <LandingSection />
-        <br />
-        <div className="md:max-w-6xl mx-auto  py-4 flex flex-col gap-6 w-full">
-          <SectionTitle title="Usage" id="usage" />
-          <div className="flex flex-col gap-4">
-            {usageSteps.map((step) => (
-              <div className="bg-card flex flex-col gap-2 ">
-                <SectionTitle
-                  className="text-md font-thin"
-                  title={step.title}
-                />
-                <step.code components={{ Code }} />
-              </div>
-            ))}
+          <LandingSection />
+          <br />
+          <div className="md:max-w-6xl mx-auto  py-4 flex flex-col gap-6 w-full">
+            <SectionTitle title="Usage" id="usage" />
+            <div className="flex flex-col gap-4">
+              {usageSteps.map((step) => (
+                <div className="bg-card flex flex-col gap-2 ">
+                  <SectionTitle
+                    className="text-md font-thin"
+                    title={step.title}
+                  />
+                  <step.code components={{ Code }} />
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-        <PrettyCountOptionTable/>
+          <PrettyCountOptionTable />
         </div>
 
         <Footer />

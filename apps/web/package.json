@@ -14,10 +14,11 @@
     "@next/mdx": "^14.1.0",
     "@pc/tailwind-config": "workspace:*",
     "@pc/ui": "workspace:*",
-    "pretty-count": "workspace:*",
+    "@vercel/analytics": "^1.3.1",
     "codehike": "^1.0.0",
     "lucide-react": "^0.412.0",
     "next": "14.1.0",
+    "pretty-count": "workspace:*",
     "react": "^18",
     "react-dom": "^18",
     "zod": "^3.23.4"
