@@ -17,6 +17,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
+  Switch,
 } from "@pc/ui"
 import { PlusIcon } from "lucide-react"
 import PrettyCountOptionTable from "./optionsTable"
@@ -171,7 +172,6 @@ export default function LandingSection() {
                     ))}
                     <div className="flex flex-col gap-3">
                       <Label>Rounding Method</Label>
-
                       <Select
                         onValueChange={(
                           val: (typeof roundingMethods)[number],
@@ -189,6 +189,10 @@ export default function LandingSection() {
                         </SelectContent>
                       </Select>
                     </div>
+                    <div className="flex flex-col gap-3">
+                      <Label htmlFor="short-symbol">Short Symbol</Label>
+                      <Switch id="short-symbol" onCheckedChange={(checked) => setOptions({...options, showFullSymbol: !checked})} />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -196,7 +200,6 @@ export default function LandingSection() {
           </div>
         </div>
       </div>
-   
     </div>
   )
 }
