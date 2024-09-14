@@ -1,6 +1,6 @@
 {
   "name": "pretty-count",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Javascript library to format numbers in a pretty human readable format",
   "repository": {
     "type": "git",

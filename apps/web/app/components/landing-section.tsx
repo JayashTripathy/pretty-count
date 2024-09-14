@@ -73,7 +73,7 @@ export default function LandingSection() {
           seperator: " ",
           ...options,
         }),
-        label: "Short",
+        label: "Standard",
       },
       {
         type: "eastAsian",
