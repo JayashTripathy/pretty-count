@@ -33,11 +33,11 @@ pc(1000000000, {
 
 | Property       | Type                                                                 | Description                                                                                   | Default |
 |----------------|----------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|---------|
-| `scale`       | [ScaleType](#scaletype)                                              | Specifies the scale type to use.                                                              | `"indian"` |
+| `scale`       | [ScaleType](#scaletype)                                              | Specifies the scale type to use.                                                              | `indian` |
 | `customScale` | [ScaleValue[]](#scalevalue)                                          | An array of custom scale values to use instead of the predefined scales.                      | `null`  |
 | `prefix`      | `string`                                                             | A string to prepend to the formatted number.                                                  | `""`    |
 | `suffix`      | `string`                                                             | A string to append to the formatted number.                                                   | `""`    |
-| `roundingMethod` | `"round" | "floor" | "ceil"`                                     | The method to use for rounding the number.                                                    | `null`  |
+| `roundingMethod` | round &#124; floor  &#124; ceil                                     | The method to use for rounding the number.                                                    | `null`  |
 | `seperator`   | `string`                                                             | The separator to use between number groups (e.g., thousands separator).                       | `" "`   |
 | `showFullSymbol` | `boolean`                                                          | Whether to show the full symbol or use the short version.                                     | `true`  |
 | `decimalPlaces` | `number`                                                           | The number of decimal places to display in the formatted number.                              | `2`     |
@@ -54,6 +54,11 @@ export type ScaleValue = {
 
 
 ### ScaleType
+```jsx
+export type ScaleType = "standard" | "indian" | "eastAsian" 
+```
+
+### Rounding Method
 ```jsx
 export type ScaleType = "standard" | "indian" | "eastAsian" 
 ``` 
