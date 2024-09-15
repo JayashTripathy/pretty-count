@@ -1,5 +1,6 @@
 import { scales } from "./constants";
 import { PrettyCountArguments, ScaleValue } from "./types";
+import {defaultOptions} from "./constants"
 function getSymbol(scale: ScaleValue, showFullSymbol: boolean): String {
 
   if (showFullSymbol || !scale.shortSymbol) return scale.symbol;
@@ -15,24 +16,27 @@ export function PrettyCount() {
     options: PrettyCountArguments["options"] = {}
   ): string {
     const {
-      scale = "indian",
-      customScale = null,
-      prefix = "",
-      suffix = "",
-      roundingMethod = null,
-      seperator = " ",
-      showFullSymbol = true,
-      decimalPlaces = 2,
-    } = options;
+      scale,
+      customScale,
+      prefix,
+      suffix ,
+      roundingMethod,
+      separator,
+      showFullSymbol,
+      decimalPlaces,
+    } = {...defaultOptions ,...options};
   
     const choosenScale = customScale || scales[scale];
     const absNumber = Math.abs(number);
     let formattedNumber = number.toString();
-  
+
+    
+    
     const scaleIndex = choosenScale.findIndex((scale) => absNumber >= scale.value);
     const targetScale = choosenScale[scaleIndex];
     const symbol = targetScale && getSymbol(targetScale, showFullSymbol);
-  
+    
+    // formattedNumber = parseFloat(Number(formattedNumber).toFixed(decimalPlaces)).toString()
     if (targetScale) {
       const scaleValue = targetScale.value;
       const scaledNumber = number / scaleValue
@@ -47,13 +51,15 @@ export function PrettyCount() {
           formattedNumber = Math.round(scaledNumber).toString();
           break;
         default:
-          formattedNumber = scaledNumber.toString();  
-      }
+          formattedNumber = scaledNumber.toFixed(decimalPlaces);
+    }
     }
 
     let decimaledNumber = parseFloat(Number(formattedNumber).toFixed(decimalPlaces))
-    const visibleSeperator = seperator.replace(/ /g, '\u00A0');  // Unicode non-breaking space
-    const result=  `${prefix}${decimaledNumber}${visibleSeperator}${symbol || ""}${suffix}`;
+    const visibleSeperator = separator.replace(/ /g, '\u00A0');  // Unicode non-breaking space
+    const visiblePrefix = prefix.replace(/ /g, '\u00A0');      // Unicode non-breaking space
+    const visibleSuffix = suffix.replace(/ /g, '\u00A0');      // Unicode non-breaking space
+    const result=  `${visiblePrefix}${decimaledNumber}${visibleSeperator}${symbol || ""}${visibleSuffix}`;
     
     return result
   }

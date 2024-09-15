@@ -1,4 +1,4 @@
-import { ScaleType, ScaleValue } from "./types";
+import { PrettyCountOption, ScaleType, ScaleValue } from "./types";
 
 export const scales: Record<ScaleType, ScaleValue[]> = {
   standard: [
@@ -31,3 +31,14 @@ export const scales: Record<ScaleType, ScaleValue[]> = {
 
 
 export const roundingMethods = ["round", "floor", "ceil"] as const;
+
+export const defaultOptions : Required<Omit<PrettyCountOption, "customScale" | "roundingMethod">> =  {
+  scale: "standard",
+  prefix: "",
+  suffix: "",
+  separator: " ",
+  showFullSymbol: true,
+  decimalPlaces: 2,
+
+}
+

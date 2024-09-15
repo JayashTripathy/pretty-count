@@ -3,7 +3,7 @@ export interface PrettyCountOption {
   scale?: ScaleType;
   customScale?: ScaleValue[];
   prefix?: string;
-  seperator?: string;
+  separator?: string;
   suffix?: string;
   roundingMethod?: typeof roundingMethods[number];
   showFullSymbol?: boolean;
