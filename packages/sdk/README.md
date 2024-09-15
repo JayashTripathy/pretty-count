@@ -33,7 +33,7 @@ pc(1000000000, {
 
 | Property       | Type                                                                 | Description                                                                                   | Default |
 |----------------|----------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|---------|
-| `scale`       | [ScaleType](#scaletype)                                              | Specifies the scale type to use.                                                              | `indian` |
+| `scale`       | [ScaleType](#scaletype)                                              | Specifies the scale type to use.                                                              | `standard` |
 | `customScale` | [ScaleValue[]](#scalevalue)                                          | An array of custom scale values to use instead of the predefined scales.                      | `null`  |
 | `prefix`      | `string`                                                             | A string to prepend to the formatted number.                                                  | `""`    |
 | `suffix`      | `string`                                                             | A string to append to the formatted number.                                                   | `""`    |
