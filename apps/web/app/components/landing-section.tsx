@@ -48,38 +48,39 @@ export default function LandingSection() {
     },
     {
       label: "Seperator",
-      value: options?.seperator,
+      value: options?.separator,
       onchange: (e: HTMLInputElement) =>
-        setOptions({ ...options, seperator: e.value }),
+        setOptions({ ...options, separator: e.value }),
     },
   ]
 
   const formattednumber = useMemo<FormattedNumber[]>(() => {
     return [
       {
-        type: "indian",
-        value: formatNumber(number, {
-          scale: "indian",
-          seperator: " ",
-          ...options,
-        }),
-        label: "Indian",
-      },
-
-      {
         type: "standard",
         value: formatNumber(number, {
           scale: "standard",
-          seperator: " ",
+          separator: " ",
           ...options,
         }),
         label: "Standard",
       },
       {
+        type: "indian",
+        value: formatNumber(number, {
+          scale: "indian",
+          separator: " ",
+          ...options,
+        }),
+        label: "Indian",
+      },
+
+   
+      {
         type: "eastAsian",
         value: formatNumber(number, {
           scale: "eastAsian",
-          seperator: " ",
+          separator: " ",
           ...options,
         }),
         label: "East Asian",
